@@ -14,7 +14,7 @@ public class Interfaz extends JFrame implements ActionListener
 	String hasGanado = "Usted Es El Ganador!!!";
 	String hasPerdido = "Has Perdido!!!";
 	String path = "src/images/";
-	JMenu inicio, integrantes;
+	JMenu inicio, autores;
 	JMenuItem salir, quienesSomos;
 	JMenuBar barraDeOpciones;
 	JPanel pPrincipal1, pPrincipal2, pSub1Principal1, pSub2Principal1;
@@ -56,7 +56,7 @@ public class Interfaz extends JFrame implements ActionListener
 		
 		
 		inicio = new JMenu("Inicio ");
-		integrantes = new JMenu("Integrantes ");
+		autores = new JMenu("Autores ");
 		salir = new JMenuItem("Salir ");
 		salir.addActionListener(this);
 		salir.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, ActionEvent.CTRL_MASK));
@@ -66,9 +66,9 @@ public class Interfaz extends JFrame implements ActionListener
 		barraDeOpciones = new JMenuBar();
 		
 		inicio.add(salir);
-		integrantes.add(quienesSomos);
+		autores.add(quienesSomos);
 		barraDeOpciones.add(inicio);
-		barraDeOpciones.add(integrantes);
+		barraDeOpciones.add(autores);
 		setJMenuBar(barraDeOpciones);
 		
 		efectivo = new JLabel("Efectivo");
@@ -257,7 +257,7 @@ public class Interfaz extends JFrame implements ActionListener
 		}		
 		if(ae.getSource().equals(quienesSomos))
 		{
-			JOptionPane.showMessageDialog(null,	"OLIVER ZULUAGA MONSALVE -  200859325", "Quienes Somos", 1);
+			JOptionPane.showMessageDialog(null,	"JULIAN EDUARDO AVILA TASCÓN"+"\n"+" OLIVER ZULUAGA MONSALVE", "Quienes Somos", 1);
 		}
 		if(ae.getSource() == bRepartir)
 		{
